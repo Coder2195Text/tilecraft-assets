@@ -1,5 +1,6 @@
 varying vec2 vTextureCoord;
 
+uniform vec3 replaceWithColor;
 uniform sampler2D uSampler;
 
 void main(void){
@@ -14,7 +15,7 @@ void main(void){
     col.r < 0.5 // pillow shading
   ) {
     gl_FragColor = vec4(
-      replaceWithColor.rgb,
+      replaceWithColor,
       col.a
     ) * col.r; // get color and then titn it by the grayscale value
   }
