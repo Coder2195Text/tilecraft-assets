@@ -13,7 +13,7 @@ void main (void)
   float a = (
       sin(
         (gl_FragCoord.x * 0.2 + gl_FragCoord.y * 0.2 - uTime * 40.0) / 10.0
-      ) + 3.0
+      ) + 2.0
     ) / 5.0;
   
   gl_FragColor = color.rgba + (a * purple.rgba);
